@@ -6,7 +6,7 @@ from sklearn import preprocessing,svm
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv("massForce.csv")
+df = pd.read_csv("./massForce.csv")
 df_binary = df[['accerlation','force']]
 
 
@@ -20,9 +20,8 @@ X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.25)
 regr = LinearRegression()
 
 regr.fit(X_train,Y_train)
-print(regr.score(X_test,Y_test))
-print(regr.coef_)
-print(regr.intercept_)
+print("Score",regr.score(X_test,Y_test))
+print("Mass: ",regr.coef_[0][0])
 
 y_pred = regr.predict(X_test)
 plt.scatter(X_test,Y_test,color = 'b')
