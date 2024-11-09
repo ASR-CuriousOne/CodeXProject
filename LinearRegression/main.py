@@ -26,5 +26,9 @@ print("Mass: ",regr.coef_[0][0])
 y_pred = regr.predict(X_test)
 plt.scatter(X_test,Y_test,color = 'b')
 plt.plot(X_test,y_pred,color = 'k')
-
+plt.xlabel("Accerlation (in m/s)")
+plt.ylabel("Force (in N)")
+plt.savefig("plot.png")
 plt.show()
+
+
