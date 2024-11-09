@@ -14,4 +14,5 @@ Using LinearRegression mass of a object is estimated
 testFileGen.py can genrate a csv file filled with force and accerlation data with some random error.
 
 Score(sort of a error in mass estimate) and mass estimated are printed in main
-
+![Mass](./image.png)
+![Plot](./plot.png)
